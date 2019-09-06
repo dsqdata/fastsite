@@ -108,9 +108,7 @@
                                     <div class="white-box">
                                         <form class="form-horizontal">
 
-                                            <div class="file-loading">
-                                                <input id="kv-explorer" type="file" multiple>
-                                            </div>
+
 
 
                                             <div class="form-group">
@@ -324,7 +322,9 @@
                             <div class="clearfix"></div>
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="settings1">
-
+                            <div class="file-loading">
+                                <input id="kv-explorer" type="file" multiple>
+                            </div>
 
                             <div class="clearfix"></div>
                         </div>
