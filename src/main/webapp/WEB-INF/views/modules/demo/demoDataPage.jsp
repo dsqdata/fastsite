@@ -29,32 +29,13 @@
                 }
             });
 
-            $("#kv-explorer").fileinput({
-                language: 'zh',
-                uploadUrl: '${ctx}/sys/file/fileUpload',
-                overwriteInitial: false,
-                initialPreviewAsData: true,
-                enctype: 'multipart/form-data',
-                initialPreview: [
-                ],
-                initialPreviewConfig: [
-                    {caption: "nature-1.jpg", size: 329892, width: "120px", url: "{$url}", key: 1},
-                    {caption: "nature-2.jpg", size: 872378, width: "120px", url: "{$url}", key: 2},
-                    {caption: "nature-3.jpg", size: 632762, width: "120px", url: "{$url}", key: 3}
-                ]
-            }).on('filebatchselected', function (event, data, id, index) {
-                $(this).fileinput("upload");
-            }).on('filesorted', function(e, params) {
-                console.log('file sorted', e, params);
-            }).on('fileuploaded', function(e, params) {
-                console.log('file uploaded', e, params);
-            }).on('fileuploaded', function(event, data, previewId, index) {
-                if (typeof(data.response.id) != 'undefined') {
-                    id_str = id_str + data.response.id + ',';
-                }
-            })
+        });
 
+        $(function() {
+            $('a[data-toggle=tab]').on('shown.bs.tab', function (e) {
+                $(window).trigger("resize");
             });
+        });
     </script>
 </head>
 <body>
@@ -107,10 +88,6 @@
                                 <div class="col-sm-12">
                                     <div class="white-box">
                                         <form class="form-horizontal">
-
-
-
-
                                             <div class="form-group">
                                                 <label class="col-md-12">用户</label>
                                                 <div class="col-md-12">
@@ -302,7 +279,8 @@
                                 <div class="col-lg-6 col-sm-6 col-xs-12">
                                     <div class="white-box">
                                         <h3 class="m-b-0 box-title">所有尺寸按钮</h3>
-                                        <p class="text-muted m-b-30">使用 <code>btn-lg</code> <code>btn-sm</code> <code>btn-xs</code></p>
+                                        <p class="text-muted m-b-30">使用 <code>btn-lg</code> <code>btn-sm</code> <code>btn-xs</code>
+                                        </p>
                                         <div class="button-box">
                                             <button class="btn btn-outline btn-default btn-lg">Large button</button>
                                             <button class="btn btn-outline btn-default">Default button</button>
@@ -315,15 +293,68 @@
                                     <div class="white-box">
                                         <h3 class="m-b-0 box-title">全尺寸按钮</h3>
                                         <p class="text-muted m-b-30">使用 <code>btn-block</code></p>
-                                        <button class="btn btn-outline btn-default btn-lg btn-block">Block button</button>
+                                        <button class="btn btn-outline btn-default btn-lg btn-block">Block button
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                             <div class="clearfix"></div>
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="settings1">
-                            <div class="file-loading">
-                                <input id="kv-explorer" type="file" multiple>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="white-box">
+                                        <form class="form-horizontal">
+                                            <div class="form-group">
+                                                <label class="col-md-12">图片</label>
+                                                <div class="col-md-12">
+                                                    <sys:fileInput
+                                                            id="uploadImage2"
+                                                            uploadUrl="/a/sys/file/fileUpload"
+                                                            filePath="uploadImage2Path"
+                                                            fileName="uploadImage2Name"
+                                                            uploadType="image"
+                                                            maxUploadNum="3"
+                                                            threads="1"
+                                                            readonly="true"
+                                                            returnPath="true"
+                                                    />
+                                                    <div class="hide">
+                                                        <input type="text" id="uploadImage2Path" name="uploadImage2Path"
+                                                               value="/userfiles/1/files/eaeed1f1-9163-46c3-87b0-2394581167d4.png"
+                                                               class="form-control"/>
+                                                        <input type="text" id="uploadImage2Name" name="uploadImage2Name"
+                                                               value="" class="form-control"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-md-12">文件</label>
+                                                <div class="col-md-12">
+                                                    <sys:fileInput
+                                                            id="file"
+                                                            uploadUrl="/a/sys/file/fileUpload"
+                                                            filePath="filePath"
+                                                            fileName="fileName"
+                                                            uploadType="file"
+                                                            maxUploadNum="3"
+                                                            threads="1"
+                                                            readonly="false"
+                                                            returnPath="true"
+                                                    />
+                                                    <div class="hide">
+                                                        <input type="text" id="filePath" name="filePath"
+                                                               value="/userfiles/1/files/eaeed1f1-9163-46c3-87b0-2394581167d4.png"
+                                                               class="form-control"/>
+                                                        <input type="text" id="fileName" name="fileName"
+                                                               value="" class="form-control"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="clearfix"></div>
