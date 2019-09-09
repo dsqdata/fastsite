@@ -3,7 +3,7 @@
 <html>
 <head>
 	<title>代码模板管理</title>
-	<meta name="decorator" content="default"/>
+	<meta name="decorator" content="defaultBs"/>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$("#name").focus();
@@ -12,15 +12,21 @@
 					loading('正在提交，请稍等...');
 					form.submit();
 				},
-				errorContainer: "#messageBox",
-				errorPlacement: function(error, element) {
-					$("#messageBox").text("输入有误，请先更正。");
-					if (element.is(":checkbox")||element.is(":radio")||element.parent().is(".input-append")){
-						error.appendTo(element.parent().parent());
-					} else {
-						error.insertAfter(element);
-					}
-				}
+                errorElement: "em",
+                errorPlacement: function (error, element) {
+                    error.addClass("help-block");
+                    if (element.prop("type") === "checkbox") {
+                        error.insertAfter(element.parent("label"));
+                    } else {
+                        error.insertAfter(element);
+                    }
+                },
+                highlight: function (element, errorClass, validClass) {
+                    $(element).parents(".col-sm-5").addClass("has-error").removeClass("has-success");
+                },
+                unhighlight: function (element, errorClass, validClass) {
+                    $(element).parents(".col-sm-5").addClass("has-success").removeClass("has-error");
+                }
 			});
 		});
 	</script>

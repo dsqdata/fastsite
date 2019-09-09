@@ -15,6 +15,11 @@
         	return false;
         }
 	</script>
+	<style>
+		.form-horizontal .form-group {
+			margin-bottom: 0px;
+		}
+	</style>
 </head>
 <body>
 	<ul class="nav nav-tabs">
