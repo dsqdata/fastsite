@@ -63,3 +63,4 @@ var js = {
 <script src="${ctxStatic}/common/fastsite.js" type="text/javascript"></script>
 
 
+<script src="${ctxStatic}/bootstrap/3.0.3/plugin/bower_components/styleswitcher/jQuery.style.switcher.js"></script>

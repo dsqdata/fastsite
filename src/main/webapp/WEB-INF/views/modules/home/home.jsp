@@ -20,7 +20,7 @@
                 <h4 class="page-title">首页</h4> </div>
             <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
                 <ol class="breadcrumb">
-                    <li><a href="#">数据分析系统</a></li>
+                    <li><a href="javascript:void(0)">数据分析系统</a></li>
                     <li class="active">首页</li>
                 </ol>
             </div>

@@ -22,107 +22,7 @@
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
-            // <c:if test="${tabmode eq '1'}"> 初始化页签
-            $.fn.initJerichoTab({
-                renderTo: '#right', uniqueId: 'jerichotab',
-                contentCss: {'height': $('#right').height() - tabTitleHeight},
-                tabs: [], loadOnce: true, tabWidth: 110, titleHeight: tabTitleHeight
-            });//</c:if>
-            // 绑定菜单单击事件
-            $("#menu a.menu").click(function () {
-                // 一级菜单焦点
-                $("#menu li.menu").removeClass("active");
-                $(this).parent().addClass("active");
-                // 左侧区域隐藏
-                if ($(this).attr("target") == "mainFrame") {
-                    $("#left,#openClose").hide();
-//					wSizeWidth();
-                    // <c:if test="${tabmode eq '1'}"> 隐藏页签
-                    $(".jericho_tab").hide();
-                    $("#mainFrame").show();//</c:if>
-                    return true;
-                }
-                // 左侧区域显示
-                $("#left,#openClose").show();
-                if (!$("#openClose").hasClass("close")) {
-                    $("#openClose").click();
-                }
-                // 显示二级菜单
-                var menuId = "#menu-" + $(this).attr("data-id");
-                if ($(menuId).length > 0) {
-                    $("#left .accordion").hide();
-                    $(menuId).show();
-                    // 初始化点击第一个二级菜单
-                    if (!$(menuId + " .accordion-body:first").hasClass('in')) {
-                        $(menuId + " .accordion-heading:first a").click();
-                    }
-                    if (!$(menuId + " .accordion-body li:first ul:first").is(":visible")) {
-                        $(menuId + " .accordion-body a:first i").click();
-                    }
-                    // 初始化点击第一个三级菜单
-                    $(menuId + " .accordion-body li:first li:first a:first i").click();
-                } else {
-                    // 获取二级菜单数据
-                    $.get($(this).attr("data-href"), function (data) {
-                        if (data.indexOf("id=\"loginForm\"") != -1) {
-                            alert('未登录或登录超时。请重新登录，谢谢！');
-                            top.location = "${ctx}";
-                            return false;
-                        }
-                        $("#left .accordion").hide();
-                        $("#left").append(data);
-                        // 链接去掉虚框
-                        $(menuId + " a").bind("focus", function () {
-                            if (this.blur) {
-                                this.blur()
-                            }
-                            ;
-                        });
-                        // 二级标题
-                        $(menuId + " .accordion-heading a").click(function () {
-                            $(menuId + " .accordion-toggle i").removeClass('icon-chevron-down').addClass('icon-chevron-right');
-                            if (!$($(this).attr('data-href')).hasClass('in')) {
-                                $(this).children("i").removeClass('icon-chevron-right').addClass('icon-chevron-down');
-                            }
-                        });
-                        // 二级内容
-                        $(menuId + " .accordion-body a").click(function () {
-                            $(menuId + " li").removeClass("active");
-                            $(menuId + " li i").removeClass("icon-white");
-                            $(this).parent().addClass("active");
-                            $(this).children("i").addClass("icon-white");
-                        });
-                        // 展现三级
-                        $(menuId + " .accordion-inner a").click(function () {
-                            var href = $(this).attr("data-href");
-                            if ($(href).length > 0) {
-                                $(href).toggle().parent().toggle();
-                                return false;
-                            }
-                            // <c:if test="${tabmode eq '1'}"> 打开显示页签
-                            return addTab($(this)); // </c:if>
-                        });
-                        // 默认选中第一个菜单
-                        $(menuId + " .accordion-body a:first i").click();
-                        $(menuId + " .accordion-body li:first li:first a:first i").click();
-                    });
-                }
-                // 大小宽度调整
-//				wSizeWidth();
-                return false;
-            });
-            // 初始化点击第一个一级菜单
-            $("#menu a.menu:first span").click();
-            // <c:if test="${tabmode eq '1'}"> 下拉菜单以选项卡方式打开
-            $("#userInfo .dropdown-menu a").mouseup(function () {
-                return addTab($(this), true);
-            });// </c:if>
-            // 鼠标移动到边界自动弹出左侧菜单
-            $("#openClose").mouseover(function () {
-                if ($(this).hasClass("open")) {
-                    $(this).click();
-                }
-            });
+
             // 获取通知数目  <c:set var="oaNotifyRemindInterval" value="${fns:getConfig('oa.notify.remind.interval')}"/>
 
             function getNotifyNum() {
@@ -138,6 +38,16 @@
 
             getNotifyNum(); //<c:if test="${oaNotifyRemindInterval ne '' && oaNotifyRemindInterval ne '0'}">
             setInterval(getNotifyNum, ${oaNotifyRemindInterval}); //</c:if>
+
+            //全屏
+            $("#fullScreen").on("click",function(){
+                fullScreen();
+            })
+            //退出全屏
+            $("#exitFullScreen").on("click",function(){
+                exitFullscreen();
+            })
+
         });
         // <c:if test="${tabmode eq '1'}"> 添加一个页签
         function addTab($this, refresh) {
@@ -155,6 +65,47 @@
             return false;
         }// </c:if>
 
+        //fullScreen()和exitScreen()有多种实现方式，此处只使用了其中一种
+        //全屏
+        function fullScreen() {
+            var element = document.documentElement;
+            if (element.requestFullscreen) {
+                element.requestFullscreen();
+            } else if (element.msRequestFullscreen) {
+                element.msRequestFullscreen();
+            } else if (element.mozRequestFullScreen) {
+                element.mozRequestFullScreen();
+            } else if (element.webkitRequestFullscreen) {
+                element.webkitRequestFullscreen();
+            }
+        }
+
+        //退出全屏
+        function exitFullscreen() {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.msExitFullscreen) {
+                document.msExitFullscreen();
+            } else if (document.mozCancelFullScreen) {
+                document.mozCancelFullScreen();
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            }
+        }
+
+        //监听window是否全屏，并进行相应的操作,支持esc键退出
+        window.onresize = function() {
+            var isFull=!!(document.webkitIsFullScreen || document.mozFullScreen ||
+                document.msFullscreenElement || document.fullscreenElement
+            );//!document.webkitIsFullScreen都为true。因此用!!
+            if (isFull==false) {
+                $("#exitFullScreen").css("display","none");
+                $("#fullScreen").css("display","");
+            }else{
+                $("#exitFullScreen").css("display","");
+                $("#fullScreen").css("display","none");
+            }
+        }
 
     </script>
 </head>
@@ -171,10 +122,10 @@
                 <div class="top-left-part">
                     <a class="logo" href="${ctx}/home/home" target="mainFrame">
                         <b>
-                            <img src="${ctxStatic}/bootstrap/3.0.3/plugin/images/admin-logo-dark.png" alt="home" style="height: 45px;" class="light-logo"/>
+                            <img src="${ctxStatic}/bootstrap/3.0.3/plugin/images/admin-logo-dark.png" alt="home" style="height: 45px;"/>
                         </b>
                         <span class="hidden-xs">
-                            <img src="${ctxStatic}/bootstrap/3.0.3/plugin/images/admin-text-dark.png" alt="home" style="width: 150px;" class="light-logo"/>
+                            <img src="${ctxStatic}/bootstrap/3.0.3/plugin/images/admin-text-dark.png" alt="home" style="width: 150px;"/>
 					    </span>
                     </a>
                 </div>
@@ -188,7 +139,25 @@
                         </div>
                     </a></li>
                 </ul>
+
+
                 <ul class="nav navbar-top-links navbar-right pull-right">
+                    <%--<li class="in">--%>
+                        <%--<form role="search" class="app-search hidden-sm hidden-xs m-r-10">--%>
+                            <%--<input type="text" placeholder="Search..." class="form-control"> <a href="" class="active"><i class="fa fa-search"></i></a> </form>--%>
+                    <%--</li>--%>
+                    <li>
+                        <a href="javascript:void(0)" id="fullScreen" style="font-size: 15px;" title="全屏"><i class="fa fa-arrows-alt"></i></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" id="exitFullScreen" style="font-size: 15px;"><i class="fa fa-compress"></i></a>
+                    </li>
+                    <li>
+                        <%--<button class="right-side-toggle waves-effect waves-light btn-info btn-circle pull-right">--%>
+                            <%--<i class="ti-settings text-white"></i></button>--%>
+
+                        <a href="javascript:void(0)" style="font-size: 16px;" title="更换皮肤"><i class="fa fa-sliders right-side-toggle"></i></a>
+                    </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#"> <img
                                 src="${ctxStatic}/bootstrap/3.0.3/plugin/images/users/varun.jpg" alt="user-img"
@@ -308,6 +277,30 @@
                     <iframe id="mainFrame" name="mainFrame" src="${ctx}/home/home"
                             style="overflow:visible;" scrolling="yes" frameborder="no" width="100%"
                             height="100%"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="right-sidebar">
+            <div class="slimscrollright">
+                <div class="rpanel-title"> 个性化设置 <span><i class="ti-close right-side-toggle"></i></span> </div>
+                <div class="r-panel-body">
+                    <ul id="themecolors" class="m-t-20">
+                        <li><b>冷色风格</b></li>
+                        <li><a href="javascript:void(0)" data-theme="default" class="default-theme">1</a></li>
+                        <li><a href="javascript:void(0)" data-theme="green" class="green-theme">2</a></li>
+                        <li><a href="javascript:void(0)" data-theme="gray" class="yellow-theme">3</a></li>
+                        <li><a href="javascript:void(0)" data-theme="blue" class="blue-theme">4</a></li>
+                        <li><a href="javascript:void(0)" data-theme="purple" class="purple-theme">5</a></li>
+                        <li><a href="javascript:void(0)" data-theme="megna" class="megna-theme">6</a></li>
+                        <li class="full-width"><b>暖色风格</b></li>
+
+                        <li><a href="javascript:void(0)" data-theme="default-dark" class="default-dark-theme">7</a></li>
+                        <li><a href="javascript:void(0)" data-theme="green-dark" class="green-dark-theme">8</a></li>
+                        <li><a href="javascript:void(0)" data-theme="gray-dark" class="yellow-dark-theme">9</a></li>
+                        <li><a href="javascript:void(0)" data-theme="blue-dark" class="blue-dark-theme">10</a></li>
+                        <li><a href="javascript:void(0)" data-theme="purple-dark" class="purple-dark-theme">11</a></li>
+                        <li><a href="javascript:void(0)" data-theme="megna-dark" class="megna-dark-theme working">12</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
