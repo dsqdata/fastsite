@@ -1,6 +1,3 @@
-/**
- *
- */
 package com.dsqdata.fastsite.modules.sys.entity;
 
 import java.util.Date;
@@ -13,8 +10,6 @@ import com.dsqdata.fastsite.common.utils.StringUtils;
 
 /**
  * 日志Entity
- * @author Fastsite
- * @version 2014-8-19
  */
 public class Log extends DataEntity<Log> {
 

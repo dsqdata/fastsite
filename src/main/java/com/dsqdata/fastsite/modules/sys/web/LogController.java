@@ -1,6 +1,3 @@
-/**
- *
- */
 package com.dsqdata.fastsite.modules.sys.web;
 
 import javax.servlet.http.HttpServletRequest;
@@ -19,8 +16,6 @@ import com.dsqdata.fastsite.modules.sys.service.LogService;
 
 /**
  * 日志Controller
- * @author Fastsite
- * @version 2013-6-2
  */
 @Controller
 @RequestMapping(value = "${adminPath}/sys/log")

@@ -29,7 +29,6 @@
         <div class="panel panel-info">
             <div class="panel-wrapper collapse in" aria-expanded="true">
                 <div class="panel-body">
-
                     <form:form id="searchForm" action="${ctx}/sys/log/" method="post" class="form-horizontal">
                         <input id="pageNo" name="pageNo" type="hidden" value="${page.pageNo}"/>
                         <input id="pageSize" name="pageSize" type="hidden" value="${page.pageSize}"/>
