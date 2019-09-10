@@ -15,9 +15,9 @@
     <style type="text/css">
 
 
-        html{
-            overflow-x:hidden!important;
-            overflow-y:hidden!important;
+        html {
+            overflow-x: hidden !important;
+            overflow-y: hidden !important;
         }
     </style>
     <script type="text/javascript">
@@ -156,9 +156,6 @@
         }// </c:if>
 
 
-
-
-
     </script>
 </head>
 <body>
@@ -174,17 +171,11 @@
                 <div class="top-left-part">
                     <a class="logo" href="${ctx}/home/home" target="mainFrame">
                         <b>
-                            <img src="${ctxStatic}/bootstrap/3.0.3/plugin/images/admin-logo.png" alt="home"
-                                 class="dark-logo"/><img
-                                src="${ctxStatic}/bootstrap/3.0.3/plugin/images/admin-logo-dark.png" alt="home"
-                                class="light-logo"/>
+                            <img src="${ctxStatic}/bootstrap/3.0.3/plugin/images/admin-logo-dark.png" alt="home" style="height: 45px;" class="light-logo"/>
                         </b>
                         <span class="hidden-xs">
-                        <img src="${ctxStatic}/bootstrap/3.0.3/plugin/images/admin-text.png" alt="home"
-                             class="dark-logo"/><img
-                                src="${ctxStatic}/bootstrap/3.0.3/plugin/images/admin-text-dark.png" alt="home" style="width: 150px;"
-                                class="light-logo"/>
-					</span>
+                            <img src="${ctxStatic}/bootstrap/3.0.3/plugin/images/admin-text-dark.png" alt="home" style="width: 150px;" class="light-logo"/>
+					    </span>
                     </a>
                 </div>
                 <ul class="nav navbar-top-links navbar-left">
@@ -262,16 +253,21 @@
                                                                    varStatus="idxStatus3">
                                                             <c:if test="${menu3.parent.id eq menu2.id}">
                                                                 <li><c:if test="${empty menu3.href}">
-                                                                    <a href="javascript:" data-id="${menu3.id}" class="waves-effect">
+                                                                    <a href="javascript:" data-id="${menu3.id}"
+                                                                       class="waves-effect">
                                                                         <i class="icon-${menu3.icon}" data-icon="v"></i>
-                                                                        <span class="hide-menu"> ${menu3.name} <span class="fa arrow"></span>
+                                                                        <span class="hide-menu"> ${menu3.name} <span
+                                                                                class="fa arrow"></span>
 																		<span class="label label-rouded label-inverse pull-right"></span>
 																	</span>
                                                                     </a>
                                                                 </c:if>
                                                                     <c:if test="${not empty menu3.href}">
-                                                                        <a href="${fn:indexOf(menu3.href, '://') eq -1 ? ctx : ''}${menu3.href}" data-id="${menu3.id}" target="mainFrame" class="waves-effect">
-                                                                            <i class="icon-${menu3.icon}" data-icon="v"></i>
+                                                                        <a href="${fn:indexOf(menu3.href, '://') eq -1 ? ctx : ''}${menu3.href}"
+                                                                           data-id="${menu3.id}" target="mainFrame"
+                                                                           class="waves-effect">
+                                                                            <i class="icon-${menu3.icon}"
+                                                                               data-icon="v"></i>
                                                                             <span class="hide-menu"> ${menu3.name}</span>
                                                                         </a>
                                                                     </c:if>
@@ -281,7 +277,9 @@
                                                     </ul>
                                                 </c:if>
                                                     <c:if test="${not empty menu2.href}">
-                                                        <a href="${fn:indexOf(menu2.href, '://') eq -1 ? ctx : ''}${menu2.href}" data-id="${menu2.id}" target="mainFrame" class="waves-effect">
+                                                        <a href="${fn:indexOf(menu2.href, '://') eq -1 ? ctx : ''}${menu2.href}"
+                                                           data-id="${menu2.id}" target="mainFrame"
+                                                           class="waves-effect">
                                                             <i class="icon-${menu2.icon}" data-icon="v"></i>
                                                             <span class="hide-menu"> ${menu2.name} </span>
                                                         </a>
@@ -308,7 +306,8 @@
             <div class="container-fluid">
                 <div id="iframeWrapper" class="row" style="margin-left: -25px;margin-right: -25px;">
                     <iframe id="mainFrame" name="mainFrame" src="${ctx}/home/home"
-                            style="overflow:visible;" scrolling="yes" frameborder="no" width="100%" height="100%"></iframe>
+                            style="overflow:visible;" scrolling="yes" frameborder="no" width="100%"
+                            height="100%"></iframe>
                 </div>
             </div>
         </div>
@@ -320,23 +319,23 @@
     var headerObj = $("#header");
     var frameObj = $("#mainFrame");
 
-//    var frameObj = $("#left, #openClose, #right, #right iframe");
+    //    var frameObj = $("#left, #openClose, #right, #right iframe");
 
 
-    function wSize(){
+    function wSize() {
         var minHeight = 300, minWidth = 980;
         var strs = getWindowSize().toString().split(",");
         frameObj.height((strs[0] < minHeight ? minHeight : strs[0]) - headerObj.height() - 58);
     }
 
-    var getWindowSize = function(){
-        return ["Height","Width"].map(function(name){
-            return window["inner"+name] ||
-                document.compatMode === "CSS1Compat" && document.documentElement[ "client" + name ] || document.body[ "client" + name ];
+    var getWindowSize = function () {
+        return ["Height", "Width"].map(function (name) {
+            return window["inner" + name] ||
+                document.compatMode === "CSS1Compat" && document.documentElement["client" + name] || document.body["client" + name];
         });
     };
 
-    $(window).resize(function(){
+    $(window).resize(function () {
         wSize();
     });
     wSize(); // 在主窗体中定义，设置调整目标

@@ -4,7 +4,7 @@
 <html>
 <head>
 	<title>${fns:getConfig('productName')} 登录</title>
-	<meta name="decorator" content="blank"/>
+	<meta name="decorator" content="defaultBs"/>
 	<style type="text/css">
 		<%--html,body,table{--%>
 		<%--background: url("${ctxStatic}/images/bj.jpg");--%>
@@ -117,7 +117,7 @@
 			background-color: #fff;
 			background-image: none;
 			border: 1px solid #ccc;
-			border-radius: 4px;
+			border-radius: 2px;
 			-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
 			box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
 			-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
@@ -155,12 +155,12 @@
 
 	<div class="lg-info-panel">
 		<div class="inner-panel">
-			<a href="javascript:void(0)" class="p-20 di"><img src="${ctxStatic}/bootstrap/3.0.3/plugin/images/admin-logo.png"></a>
-			<%--<div class="lg-content">--%>
-				<%--<h2>管理端 &amp; XXXX系统</h2>--%>
-				<%--<p class="text-muted">管理系统管理系统管理系统管理系统管理系统管理系统... </p>--%>
+			<a href="javascript:void(0)" class="p-20 di"><img src="${ctxStatic}/bootstrap/3.0.3/plugin/images/admin-logo-dark.png" style="height: 45px;"> <img src="${ctxStatic}/bootstrap/3.0.3/plugin/images/admin-text-dark.png" style="height: 45px;"></a>
+			<div class="lg-content">
+				<h2>快速开发框架 &amp; FastSite</h2>
+				<p class="text-muted">只为快速开发而生，主要使用技术 SpringMvc Mybatis Bootstrap3 Webuploader </p>
 				<%--<p class="text-muted">管理系统管理系统... </p>--%>
-			<%--</div>--%>
+			</div>
 		</div>
 	</div>
 	<div class="new-login-box">
@@ -179,7 +179,7 @@
 					<sys:validateCode name="validateCode" inputCssStyle="margin-bottom:0;"/>
 				</div></c:if>
 
-				<label for="rememberMe" title="下次不需要再登录"><input type="checkbox" id="rememberMe" name="rememberMe" ${rememberMe ? 'checked' : ''}/> 记住我（公共场所慎用）</label>
+				<label for="rememberMe" title="下次不需要再登录"><input type="checkbox" id="rememberMe" name="rememberMe" ${rememberMe ? 'checked' : ''}/> 记住我</label>
 				<br>
 				<input class="btn btn-large btn-primary" type="submit" value="登 录" style="    margin-top: 15px;
     float: right;
