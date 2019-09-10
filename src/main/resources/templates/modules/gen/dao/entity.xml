@@ -10,7 +10,7 @@ package ${packageName}.${moduleName}.entity<#if subModuleName != "">.${subModule
 import ${i};
 </#list>
 
-import com.dsqdata.fastsite.common.persistence.DataEntity;
+import com.pangu.fastsite.common.persistence.DataEntity;
 
 /**
  * ${functionName}Entity

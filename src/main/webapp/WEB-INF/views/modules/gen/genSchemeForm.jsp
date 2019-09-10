@@ -84,7 +84,7 @@
                                     <label class="col-sm-4 control-label"><font color="red">*</font> 生成包路径:</label>
                                     <div class="col-sm-5">
                                         <form:input path="packageName" htmlEscape="false" maxlength="500" class="required input-xlarge form-control"/>
-                                        <span class="help-inline">建议模块包：com.dsqdata.fastsite.modules</span>
+                                        <span class="help-inline">建议模块包：com.pangu.fastsite.modules</span>
                                     </div>
                                 </div>
                                 <div class="form-group">

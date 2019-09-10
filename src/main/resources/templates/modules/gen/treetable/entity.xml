@@ -11,7 +11,7 @@ package ${packageName}.${moduleName}.entity<#if subModuleName != "">.${subModule
 import ${i};
 </#list>
 
-import com.dsqdata.fastsite.common.persistence.TreeEntity;
+import com.pangu.fastsite.common.persistence.TreeEntity;
 
 /**
  * ${functionName}Entity

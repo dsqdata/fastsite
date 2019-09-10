@@ -1,5 +1,5 @@
 <%@page import="java.io.File"%>
-<%@page import="com.dsqdata.fastsite.common.utils.ImageGeo"%>
+<%@page import="com.pangu.fastsite.common.utils.ImageGeo"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"%>
 <%@ include file="/WEB-INF/views/include/taglib.jsp"%>
 <!DOCTYPE html>

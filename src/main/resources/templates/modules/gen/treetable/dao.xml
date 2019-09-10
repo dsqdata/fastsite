@@ -7,8 +7,8 @@
 
 package ${packageName}.${moduleName}.dao<#if subModuleName != "">.${subModuleName}</#if>;
 
-import com.dsqdata.fastsite.common.persistence.TreeDao;
-import com.dsqdata.fastsite.common.persistence.annotation.MyBatisDao;
+import com.pangu.fastsite.common.persistence.TreeDao;
+import com.pangu.fastsite.common.persistence.annotation.MyBatisDao;
 import ${packageName}.${moduleName}.entity<#if subModuleName != "">.${subModuleName}</#if>.${ClassName};
 
 /**

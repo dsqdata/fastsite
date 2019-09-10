@@ -41,12 +41,12 @@
 	
 	<!-- 类型别名 -->
 	<typeAliases>
-		<typeAlias alias="Page" type="com.dsqdata.fastsite.common.persistence.Page" /><!--分页  -->
+		<typeAlias alias="Page" type="com.pangu.fastsite.common.persistence.Page" /><!--分页  -->
 	</typeAliases>
 	
 	<!-- 插件配置 -->
 	<plugins>
-		<plugin interceptor="com.dsqdata.fastsite.common.persistence.interceptor.PaginationInterceptor" />
+		<plugin interceptor="com.pangu.fastsite.common.persistence.interceptor.PaginationInterceptor" />
     </plugins>
 	
 </configuration>
