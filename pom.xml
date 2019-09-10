@@ -12,18 +12,18 @@
     <inceptionYear>2019-2019</inceptionYear>
 
     <!-- Inherit defaults from Spring Boot -->
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.4.RELEASE</version>
-        <relativePath/>
-    </parent>
+    <!--<parent>-->
+        <!--<groupId>org.springframework.boot</groupId>-->
+        <!--<artifactId>spring-boot-starter-parent</artifactId>-->
+        <!--<version>2.0.4.RELEASE</version>-->
+        <!--<relativePath/>-->
+    <!--</parent>-->
 
     <!-- 项目属性 -->
     <properties>
 
         <!-- main version setting -->
-        <spring.version>4.2.5.RELEASE</spring.version>
+        <spring.version>5.1.9.RELEASE</spring.version>
         <validator.version>5.2.4.Final</validator.version>
         <mybatis.version>3.2.8</mybatis.version>
         <mybatis-spring.version>1.2.3</mybatis-spring.version>
@@ -41,8 +41,8 @@
         <commons-codec.version>1.9</commons-codec.version>
         <commons-fileupload.version>1.3.1</commons-fileupload.version>
         <commons-beanutils.version>1.9.1</commons-beanutils.version>
-        <jackson.version>2.2.3</jackson.version>
-        <fastjson.version>1.1.40</fastjson.version>
+        <jackson.version>2.9.9</jackson.version>
+        <fastjson.version>1.2.60</fastjson.version>
         <xstream.version>1.4.7</xstream.version>
         <guava.version>17.0</guava.version>
         <dozer.version>5.5.1</dozer.version>
@@ -747,27 +747,27 @@
             </plugin>
 
             <!-- jetty插件 -->
-            <plugin>
-                <groupId>org.mortbay.jetty</groupId>
-                <artifactId>jetty-maven-plugin</artifactId>
-                <version>${jetty.version}</version>
-                <configuration>
-                    <connectors>
-                        <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
-                            <port>${webserver.port}</port>
-                        </connector>
-                    </connectors>
-                    <webAppConfig>
-                        <contextPath>/${project.artifactId}</contextPath>
-                    </webAppConfig>
-                    <systemProperties>
-                        <systemProperty>
-                            <name>org.mortbay.util.URI.charset</name>
-                            <value>${project.build.sourceEncoding}</value>
-                        </systemProperty>
-                    </systemProperties>
-                </configuration>
-            </plugin>
+            <!--<plugin>-->
+                <!--<groupId>org.mortbay.jetty</groupId>-->
+                <!--<artifactId>jetty-maven-plugin</artifactId>-->
+                <!--<version>${jetty.version}</version>-->
+                <!--<configuration>-->
+                    <!--<connectors>-->
+                        <!--<connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">-->
+                            <!--<port>${webserver.port}</port>-->
+                        <!--</connector>-->
+                    <!--</connectors>-->
+                    <!--<webAppConfig>-->
+                        <!--<contextPath>/${project.artifactId}</contextPath>-->
+                    <!--</webAppConfig>-->
+                    <!--<systemProperties>-->
+                        <!--<systemProperty>-->
+                            <!--<name>org.mortbay.util.URI.charset</name>-->
+                            <!--<value>${project.build.sourceEncoding}</value>-->
+                        <!--</systemProperty>-->
+                    <!--</systemProperties>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
 
             <!-- resource插件 -->
             <plugin>

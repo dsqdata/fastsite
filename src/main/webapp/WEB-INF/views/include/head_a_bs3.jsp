@@ -19,8 +19,7 @@ var js = {
     }
 }
 </script>
-<script src="${ctxStatic}/bootstrap/3.0.3/plugin/bower_components/jquery/dist/jquery.min.js"
-        type="text/javascript"></script>
+<script src="${ctxStatic}/bootstrap/3.0.3/plugin/bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
 <script src="${ctxStatic}/bootstrap/3.0.3/plugin/js/jquery-migrate-1.2.1.js" type="text/javascript"></script>
 
 <link href="${ctxStatic}/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
@@ -32,13 +31,10 @@ var js = {
 <link href="${ctxStatic}/bootstrap/3.0.3/plugin/css/animate.css" rel="stylesheet">
 <link href="${ctxStatic}/bootstrap/3.0.3/plugin/css/style.css" rel="stylesheet">
 <link href="${ctxStatic}/bootstrap/3.0.3/plugin/css/colors/megna-dark.css" id="theme" rel="stylesheet">
-<link href="${ctxStatic}/bootstrap/3.0.3/plugin/bower_components/bootstrap-select/bootstrap-select.min.css"
-      rel="stylesheet"/>
+<link href="${ctxStatic}/bootstrap/3.0.3/plugin/bower_components/bootstrap-select/bootstrap-select.min.css" rel="stylesheet"/>
 
 <script src="${ctxStatic}/bootstrap/3.0.3/plugin/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
-<script src="${ctxStatic}/bootstrap/3.0.3/plugin/bower_components/bootstrap-select/bootstrap-select.min.js"
-        type="text/javascript"></script>
-
+<script src="${ctxStatic}/bootstrap/3.0.3/plugin/bower_components/bootstrap-select/bootstrap-select.min.js" type="text/javascript"></script>
 
 <script src="${ctxStatic}/bootstrap/3.0.3/plugin/js/jquery.slimscroll.js"></script>
 <script src="${ctxStatic}/bootstrap/3.0.3/plugin/js/waves.js"></script>
@@ -47,17 +43,12 @@ var js = {
 
 <script src="${ctxStatic}/bootstrap/3.0.3/plugin/bower_components/webuploader/0.1/webuploader.js"></script>
 <script src="${ctxStatic}/bootstrap/3.0.3/plugin/bower_components/webuploader/0.1/webuploader.extend.js"></script>
-<link href="${ctxStatic}/bootstrap/3.0.3/plugin/bower_components/webuploader/0.1/webuploader.css" rel="stylesheet"
-      type="text/css">
-<link href="${ctxStatic}/bootstrap/3.0.3/plugin/bower_components/webuploader/0.1/webuploader.extend.css"
-      rel="stylesheet" type="text/css">
+<link href="${ctxStatic}/bootstrap/3.0.3/plugin/bower_components/webuploader/0.1/webuploader.css" rel="stylesheet" type="text/css">
+<link href="${ctxStatic}/bootstrap/3.0.3/plugin/bower_components/webuploader/0.1/webuploader.extend.css" rel="stylesheet" type="text/css">
 
-<script type="text/ecmascript"
-        src="${ctxStatic}/bootstrap/3.0.3/plugin/bower_components/jqGrid/js/i18n/grid.locale-cn.js"></script>
-<script type="text/ecmascript"
-        src="${ctxStatic}/bootstrap/3.0.3/plugin/bower_components/jqGrid/js/jquery.jqGrid.min.js"></script>
-<link rel="stylesheet" type="text/css" media="screen"
-      href="${ctxStatic}/bootstrap/3.0.3/plugin/bower_components/jqGrid/css/ui.jqgrid-bootstrap.css"/>
+<script type="text/ecmascript" src="${ctxStatic}/bootstrap/3.0.3/plugin/bower_components/jqGrid/js/i18n/grid.locale-cn.js"></script>
+<script type="text/ecmascript" src="${ctxStatic}/bootstrap/3.0.3/plugin/bower_components/jqGrid/js/jquery.jqGrid.min.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="${ctxStatic}/bootstrap/3.0.3/plugin/bower_components/jqGrid/css/ui.jqgrid-bootstrap.css"/>
 
 <%--<script src="${ctxStatic}/bootstrap/3.0.3/plugin/js/validator.js"></script>--%>
 <%--<link href="${ctxStatic}/jquery-validation/1.11.0/jquery.validate.min.css" type="text/css" rel="stylesheet" />--%>

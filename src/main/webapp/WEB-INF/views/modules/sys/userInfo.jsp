@@ -46,6 +46,7 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="white-box">
+					<sys:message content="${message}"/>
 					<h3 class="box-title m-b-0">修改信息</h3>
 					<p class="text-muted m-b-30"> Change User Info</p>
 					<div class="panel panel-default">
