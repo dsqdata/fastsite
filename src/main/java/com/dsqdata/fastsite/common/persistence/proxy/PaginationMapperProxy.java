@@ -1,6 +1,3 @@
-/**
- *
- */
 package com.dsqdata.fastsite.common.persistence.proxy;
 
 import org.apache.ibatis.binding.BindingException;

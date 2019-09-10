@@ -1,6 +1,3 @@
-/**
- *
- */
 package com.dsqdata.fastsite.common.persistence.dialect.db;
 
 import org.apache.commons.lang3.StringUtils;

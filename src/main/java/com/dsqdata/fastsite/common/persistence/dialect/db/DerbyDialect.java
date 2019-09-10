@@ -1,6 +1,3 @@
-/**
- *
- */
 package com.dsqdata.fastsite.common.persistence.dialect.db;
 
 import com.dsqdata.fastsite.common.persistence.dialect.Dialect;

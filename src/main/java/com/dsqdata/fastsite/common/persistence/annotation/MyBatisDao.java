@@ -1,6 +1,3 @@
-/**
- *
- */
 package com.dsqdata.fastsite.common.persistence.annotation;
 
 import java.lang.annotation.Documented;

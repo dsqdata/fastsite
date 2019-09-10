@@ -54,9 +54,9 @@
 											<td>{{dict.type}}</td>
 											<td>{{row.remarks}}</td>
 											<shiro:hasPermission name="sys:office:edit"><td>
-												<a href="${ctx}/sys/office/form?id={{row.id}}">修改</a>
-												<a href="${ctx}/sys/office/delete?id={{row.id}}" onclick="return confirmx('要删除该机构及所有子机构项吗？', this.href)">删除</a>
-												<a href="${ctx}/sys/office/form?parent.id={{row.id}}">添加下级机构</a>
+												<a href="${ctx}/sys/office/form?parent.id={{row.id}}" class="btn btn-primary table-btn"><i class="fa fa-plus-square"></i> 添加下级机构</a>
+												<a href="${ctx}/sys/office/form?id={{row.id}}" class="btn btn-info table-btn"><i class="fa fa-edit"></i> 修改</a>
+												<a href="${ctx}/sys/office/delete?id={{row.id}}" onclick="return confirmx('要删除该机构及所有子机构项吗？', this.href)" class="btn btn-danger table-btn"><i class="fa fa-minus-square"/> 删除</a>
 											</td></shiro:hasPermission>
 										</tr>
 									</script>

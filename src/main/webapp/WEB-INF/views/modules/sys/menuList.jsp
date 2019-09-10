@@ -62,9 +62,9 @@
 													<td>${menu.isShow eq '1'?'显示':'隐藏'}</td>
 													<td title="${menu.permission}">${fns:abbr(menu.permission,30)}</td>
 													<shiro:hasPermission name="sys:menu:edit"><td nowrap>
-														<a href="${ctx}/sys/menu/form?id=${menu.id}">修改</a>
-														<a href="${ctx}/sys/menu/delete?id=${menu.id}" onclick="return confirmx('要删除该菜单及所有子菜单项吗？', this.href)">删除</a>
-														<a href="${ctx}/sys/menu/form?parent.id=${menu.id}">添加下级菜单</a>
+														<a href="${ctx}/sys/menu/form?parent.id=${menu.id}" class="btn btn-primary table-btn"><i class="fa fa-plus-square"></i> 添加下级菜单</a>
+														<a href="${ctx}/sys/menu/form?id=${menu.id}" class="btn btn-info table-btn"><i class="fa fa-edit"></i> 修改</a>
+														<a href="${ctx}/sys/menu/delete?id=${menu.id}" onclick="return confirmx('要删除该菜单及所有子菜单项吗？', this.href)" class="btn btn-danger table-btn"><i class="fa fa-minus-square"></i> 删除</a>
 													</td></shiro:hasPermission>
 												</tr>
 											</c:forEach></tbody>

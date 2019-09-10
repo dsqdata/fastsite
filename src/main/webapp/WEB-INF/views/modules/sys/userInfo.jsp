@@ -116,7 +116,7 @@
 
 								<div class="form-group">
 									<div class="col-sm-9 col-sm-offset-4">
-										<button type="submit" class="btn btn-primary" name="signup" value="Sign up">确认修改</button>
+										<button type="submit" class="btn btn-primary" name="signup" value="Sign up"><i class="fa fa-save"></i> 确认修改</button>
 									</div>
 								</div>
 							</form:form>

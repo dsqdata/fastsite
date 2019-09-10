@@ -139,9 +139,8 @@
                                         <td>${user.mobile}</td>
                                         <shiro:hasPermission name="sys:user:edit">
                                             <td>
-                                                <a href="${ctx}/sys/user/form?id=${user.id}">修改</a>
-                                                <a href="${ctx}/sys/user/delete?id=${user.id}"
-                                                   onclick="return confirmx('确认要删除该用户吗？', this.href)">删除</a>
+                                                <a href="${ctx}/sys/user/form?id=${user.id}" class="btn btn-info table-btn"><i class="fa fa-edit"></i> 修改</a>
+                                                <a href="${ctx}/sys/user/delete?id=${user.id}" onclick="return confirmx('确认要删除该用户吗？', this.href)" class="btn btn-danger table-btn"><i class="fa fa-minus-square"></i> 删除</a>
                                             </td>
                                         </shiro:hasPermission>
                                     </tr>

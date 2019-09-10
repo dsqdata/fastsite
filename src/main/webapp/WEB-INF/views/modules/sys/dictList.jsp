@@ -105,10 +105,10 @@
                                         <td>${dict.sort}</td>
                                         <shiro:hasPermission name="sys:dict:edit">
                                             <td>
-                                                <a href="${ctx}/sys/dict/form?id=${dict.id}">修改</a>
+                                                <a href="<c:url value='${fns:getAdminPath()}/sys/dict/form?type=${dict.type}&sort=${dict.sort+10}'><c:param name='description' value='${dict.description}'/></c:url>"  class="btn btn-primary table-btn"><i class="fa fa-plus-square"></i> 添加键值</a>
+                                                <a href="${ctx}/sys/dict/form?id=${dict.id}" class="btn btn-info table-btn"><i class="fa fa-edit"></i> 修改</a>
                                                 <a href="${ctx}/sys/dict/delete?id=${dict.id}&type=${dict.type}"
-                                                   onclick="return confirmx('确认要删除该字典吗？', this.href)">删除</a>
-                                                <a href="<c:url value='${fns:getAdminPath()}/sys/dict/form?type=${dict.type}&sort=${dict.sort+10}'><c:param name='description' value='${dict.description}'/></c:url>">添加键值</a>
+                                                   onclick="return confirmx('确认要删除该字典吗？', this.href)" class="btn btn-danger table-btn"><i class="fa fa-minus-square"></i> 删除</a>
                                             </td>
                                         </shiro:hasPermission>
                                     </tr>
