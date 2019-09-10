@@ -50,18 +50,29 @@ else {
 <html>
 <head>
 	<title>400 - 请求出错</title>
-	<%@include file="/WEB-INF/views/include/head.jsp" %>
+	<%@include file="/WEB-INF/views/include/head_a_bs3.jsp" %>
 </head>
 <body>
-	<div class="container-fluid">
-		<div class="page-header"><h1>参数有误,服务器无法解析.</h1></div>
-		<div class="errorMessage">
-			<%=StringUtils.toHtml(sb.toString())%> <br/>
+	<%--<div class="container-fluid">--%>
+		<%--<div class="page-header"><h1>参数有误,服务器无法解析.</h1></div>--%>
+		<%--<div class="errorMessage">--%>
+			<%--<%=StringUtils.toHtml(sb.toString())%> <br/>--%>
+		<%--</div>--%>
+		<%--<a href="javascript:" onclick="history.go(-1);" class="btn">返回上一页</a> &nbsp;--%>
+		<%--<br/> <br/>--%>
+		<%--<script>try{top.$.jBox.closeTip();}catch(e){}</script>--%>
+	<%--</div>--%>
+
+	<section id="wrapper" class="error-page">
+		<div class="error-box">
+			<div class="error-body text-center">
+				<h1 class="text-danger">400</h1>
+				<h3 class="text-uppercase">参数有误,服务器无法解析.</h3>
+				<p class="text-muted m-t-30 m-b-30"><%=StringUtils.toHtml(sb.toString())%></p>
+				<a href="javascript:" onclick="history.go(-1);" class="btn btn-danger btn-rounded waves-effect waves-light m-b-40"> 返回上一页 </a> </div>
 		</div>
-		<a href="javascript:" onclick="history.go(-1);" class="btn">返回上一页</a> &nbsp;
-		<br/> <br/>
-		<script>try{top.$.jBox.closeTip();}catch(e){}</script>
-	</div>
+	</section>
+
 </body>
 </html>
 <%
