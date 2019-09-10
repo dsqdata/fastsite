@@ -16,9 +16,9 @@ if (Servlets.isAjaxRequest(request)) {
 //输出异常信息页面
 else {
 %>
-<%@page import="com.bonc.fastsite.common.web.Servlets"%>
-<%@page import="com.bonc.fastsite.common.utils.Exceptions"%>
-<%@page import="com.bonc.fastsite.common.utils.StringUtils"%>
+<%@page import="com.dsqdata.fastsite.common.web.Servlets"%>
+<%@page import="com.dsqdata.fastsite.common.utils.Exceptions"%>
+<%@page import="com.dsqdata.fastsite.common.utils.StringUtils"%>
 <%@page contentType="text/html;charset=UTF-8" isErrorPage="true"%>
 <%@include file="/WEB-INF/views/include/taglib.jsp"%>
 <!DOCTYPE html>

@@ -12,8 +12,8 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.bonc.fastsite.common.service.TreeService;
-import com.bonc.fastsite.common.utils.StringUtils;
+import com.dsqdata.fastsite.common.service.TreeService;
+import com.dsqdata.fastsite.common.utils.StringUtils;
 import ${packageName}.${moduleName}.entity<#if subModuleName != "">.${subModuleName}</#if>.${ClassName};
 import ${packageName}.${moduleName}.dao<#if subModuleName != "">.${subModuleName}</#if>.${ClassName}Dao;
 

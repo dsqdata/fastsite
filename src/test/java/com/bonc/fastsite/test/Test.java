@@ -1,4 +1,4 @@
-package com.bonc.fastsite.test;
+package com.dsqdata.fastsite.test;
 
 public class Test {
 

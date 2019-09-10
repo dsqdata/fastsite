@@ -1,4 +1,4 @@
-package com.bonc.fastsite.tools;
+package com.dsqdata.fastsite.tools;
 
 import java.io.BufferedReader;
 import java.io.File;
