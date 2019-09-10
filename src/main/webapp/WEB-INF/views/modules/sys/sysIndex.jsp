@@ -14,10 +14,14 @@
 
     <style type="text/css">
 
-
         html {
             overflow-x: hidden !important;
             overflow-y: hidden !important;
+        }
+
+        .logo b{
+            float: left;
+            padding-left: 0px;
         }
     </style>
     <script type="text/javascript">
@@ -129,6 +133,7 @@
 					    </span>
                     </a>
                 </div>
+
                 <ul class="nav navbar-top-links navbar-left">
                     <li><a href="javascript:void(0)" class="open-close waves-effect waves-light"><i class="ti-menu"></i></a>
                     </li>
@@ -139,7 +144,6 @@
                         </div>
                     </a></li>
                 </ul>
-
 
                 <ul class="nav navbar-top-links navbar-right pull-right">
                     <%--<li class="in">--%>
