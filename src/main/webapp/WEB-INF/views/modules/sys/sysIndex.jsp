@@ -23,6 +23,13 @@
             float: left;
             padding-left: 0px;
         }
+
+        .hide-menu .arrow{
+            top: 17px!important;
+        }
+        .user-pro .arrow{
+            top: 23px!important;
+        }
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -51,7 +58,6 @@
             $("#exitFullScreen").on("click",function(){
                 exitFullscreen();
             })
-
         });
         // <c:if test="${tabmode eq '1'}"> 添加一个页签
         function addTab($this, refresh) {
@@ -160,7 +166,7 @@
                         <%--<button class="right-side-toggle waves-effect waves-light btn-info btn-circle pull-right">--%>
                             <%--<i class="ti-settings text-white"></i></button>--%>
 
-                        <a href="javascript:void(0)" style="font-size: 16px;" title="更换皮肤"><i class="fa fa-sliders right-side-toggle"></i></a>
+                        <a href="javascript:void(0)" class="right-side-toggle" style="font-size: 16px;" title="更换皮肤"><i class="fa fa-sliders "></i></a>
                     </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#"> <img
