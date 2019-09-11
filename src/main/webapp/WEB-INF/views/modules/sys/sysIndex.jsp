@@ -163,9 +163,6 @@
                         <a href="javascript:void(0)" id="exitFullScreen" style="font-size: 15px;"><i class="fa fa-compress"></i></a>
                     </li>
                     <li>
-                        <%--<button class="right-side-toggle waves-effect waves-light btn-info btn-circle pull-right">--%>
-                            <%--<i class="ti-settings text-white"></i></button>--%>
-
                         <a href="javascript:void(0)" class="right-side-toggle" style="font-size: 16px;" title="更换皮肤"><i class="fa fa-sliders "></i></a>
                     </li>
                     <li class="dropdown">
@@ -211,7 +208,7 @@
                             <li>
                                 <c:if test="${empty menu.href}">
                                     <a href="javascript:" data-id="${menu.id}" class="waves-effect">
-                                        <i class="icon-${menu.icon}" data-icon="v"></i>
+                                        <i class="fa ${menu.icon}" data-icon="v"></i>
                                         <span class="hide-menu"> ${menu.name} <span class="fa arrow"></span>
 										<span class="label label-rouded label-inverse pull-right"></span>
 									</span>
@@ -221,7 +218,7 @@
                                             <c:if test="${menu2.parent.id eq menu.id}">
                                                 <li><c:if test="${empty menu2.href}">
                                                     <a href="javascript:" data-id="${menu2.id}" class="waves-effect">
-                                                        <i class="icon-${menu2.icon}" data-icon="v"></i>
+                                                        <i class="fa ${menu2.icon}" data-icon="v"></i>
                                                         <span class="hide-menu"> ${menu2.name} <span
                                                                 class="fa arrow"></span>
 														<span class="label label-rouded label-inverse pull-right"></span>
@@ -234,7 +231,7 @@
                                                                 <li><c:if test="${empty menu3.href}">
                                                                     <a href="javascript:" data-id="${menu3.id}"
                                                                        class="waves-effect">
-                                                                        <i class="icon-${menu3.icon}" data-icon="v"></i>
+                                                                        <i class="fa ${menu3.icon}" data-icon="v"></i>
                                                                         <span class="hide-menu"> ${menu3.name} <span
                                                                                 class="fa arrow"></span>
 																		<span class="label label-rouded label-inverse pull-right"></span>
@@ -245,7 +242,7 @@
                                                                         <a href="${fn:indexOf(menu3.href, '://') eq -1 ? ctx : ''}${menu3.href}"
                                                                            data-id="${menu3.id}" target="mainFrame"
                                                                            class="waves-effect">
-                                                                            <i class="icon-${menu3.icon}"
+                                                                            <i class="fa ${menu3.icon}"
                                                                                data-icon="v"></i>
                                                                             <span class="hide-menu"> ${menu3.name}</span>
                                                                         </a>
@@ -259,7 +256,7 @@
                                                         <a href="${fn:indexOf(menu2.href, '://') eq -1 ? ctx : ''}${menu2.href}"
                                                            data-id="${menu2.id}" target="mainFrame"
                                                            class="waves-effect">
-                                                            <i class="icon-${menu2.icon}" data-icon="v"></i>
+                                                            <i class="fa ${menu2.icon}" data-icon="v"></i>
                                                             <span class="hide-menu"> ${menu2.name} </span>
                                                         </a>
                                                     </c:if>

@@ -11,6 +11,7 @@
 
 
 	<decorator name="bootsrap3" page="layouts/blank_bs3.jsp"/>
+	<decorator name="blankBs" page="layouts/blank_bs3.jsp"/>
 	<decorator name="defaultBs" page="layouts/default_bs3.jsp"/>
 
 </decorators>

@@ -21,7 +21,7 @@
             <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
                 <ol class="breadcrumb">
                     <li><a href="javascript:void(0)">数据分析系统</a></li>
-                    <li class="active">首页</li>
+                    <li class="active">首页 </li>
                 </ol>
             </div>
         </div>

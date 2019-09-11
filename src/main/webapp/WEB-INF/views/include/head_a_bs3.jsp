@@ -26,8 +26,6 @@ var js = {
 <link href="${ctxStatic}/bootstrap/3.0.3/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet"/>
 <script src="${ctxStatic}/bootstrap/3.0.3/js/bootstrap.min.js" type="text/javascript"></script>
 
-<link href="${ctxStatic}/bootstrap/2.3.1/awesome/font-awesome.min.css" type="text/css" rel="stylesheet"/>
-
 <link href="${ctxStatic}/bootstrap/3.0.3/plugin/css/animate.css" rel="stylesheet">
 <link href="${ctxStatic}/bootstrap/3.0.3/plugin/css/style.css" rel="stylesheet">
 <link href="${ctxStatic}/bootstrap/3.0.3/plugin/css/colors/megna-dark.css" id="theme" rel="stylesheet">
