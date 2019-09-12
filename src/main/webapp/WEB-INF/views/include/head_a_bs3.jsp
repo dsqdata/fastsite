@@ -18,7 +18,8 @@
 <link href="${ctxStatic}/bootstrap/3.0.3/plugin/css/animate.css" rel="stylesheet">
 <link href="${ctxStatic}/bootstrap/3.0.3/plugin/css/style.css" rel="stylesheet">
 <link href="${ctxStatic}/bootstrap/3.0.3/plugin/css/colors/megna-dark.css" id="theme" rel="stylesheet">
-<link href="${ctxStatic}/bootstrap/3.0.3/plugin/bower_components/bootstrap-select/bootstrap-select.min.css" rel="stylesheet"/>
+
+<link href="${ctxStatic}/bootstrap/3.0.3/plugin/bower_components/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet"/>
 <link href="${ctxStatic}/bootstrap/3.0.3/plugin/bower_components/webuploader/0.1/webuploader.css" rel="stylesheet" type="text/css">
 <link href="${ctxStatic}/bootstrap/3.0.3/plugin/bower_components/webuploader/0.1/webuploader.extend.css" rel="stylesheet" type="text/css">
 <link href="${ctxStatic}/jquery-jbox/2.3/Skins/Bootstrap/jbox.min.css" rel="stylesheet"/>
@@ -27,7 +28,8 @@
 <script src="${ctxStatic}/bootstrap/3.0.3/plugin/bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
 <script src="${ctxStatic}/bootstrap/3.0.3/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="${ctxStatic}/bootstrap/3.0.3/plugin/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
-<script src="${ctxStatic}/bootstrap/3.0.3/plugin/bower_components/bootstrap-select/bootstrap-select.min.js" type="text/javascript"></script>
+<script src="${ctxStatic}/bootstrap/3.0.3/plugin/bower_components/bootstrap-select/js/bootstrap-select.min.js" type="text/javascript"></script>
+<script src="${ctxStatic}/bootstrap/3.0.3/plugin/bower_components/bootstrap-select/js/i18n/defaults-zh_CN.min.js" type="text/javascript"></script>
 <script src="${ctxStatic}/bootstrap/3.0.3/plugin/bower_components/webuploader/0.1/webuploader.js"></script>
 <script src="${ctxStatic}/bootstrap/3.0.3/plugin/bower_components/webuploader/0.1/webuploader.extend.js"></script>
 <script src="${ctxStatic}/bootstrap/3.0.3/plugin/bower_components/styleswitcher/jQuery.style.switcher.js"></script>

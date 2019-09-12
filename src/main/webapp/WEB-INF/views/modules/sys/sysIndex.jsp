@@ -132,10 +132,12 @@
                 <div class="top-left-part">
                     <a class="logo" href="${ctx}/home/home" target="mainFrame">
                         <b>
-                            <img src="${ctxStatic}/bootstrap/3.0.3/plugin/images/admin-logo-dark.png" alt="home" style="height: 45px;"/>
+                            <img src="${ctxStatic}/bootstrap/3.0.3/images/logo/admin-logo.png" class="dark-logo" alt="home" style="height: 45px;"/>
+                            <img src="${ctxStatic}/bootstrap/3.0.3/images/logo/admin-logo-dark.png" class="light-logo" alt="home" style="height: 45px;"/>
                         </b>
                         <span class="hidden-xs">
-                            <img src="${ctxStatic}/bootstrap/3.0.3/plugin/images/admin-text-dark.png" alt="home" style="width: 150px;"/>
+                            <img src="${ctxStatic}/bootstrap/3.0.3/images/logo/admin-text.png" class="dark-logo" alt="home" style="height: 45px;"/>
+                            <img src="${ctxStatic}/bootstrap/3.0.3/images/logo/admin-text-dark.png" class="light-logo" alt="home" style="height: 45px;"/>
 					    </span>
                     </a>
                 </div>
@@ -167,7 +169,7 @@
                     </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#"> <img
-                                src="${ctxStatic}/bootstrap/3.0.3/plugin/images/users/varun.jpg" alt="user-img"
+                                src="${ctxStatic}/bootstrap/3.0.3/images/users/varun.jpg" alt="user-img"
                                 width="36" class="img-circle"><b class="hidden-xs">${fns:getUser().name}</b><span
                                 class="caret"></span> </a>
                         <ul class="dropdown-menu dropdown-user animated flipInY">
@@ -190,7 +192,7 @@
                 <ul class="nav" id="side-menu">
                     <li class="user-pro">
                         <a href="#" class="waves-effect"><img
-                                src="${ctxStatic}/bootstrap/3.0.3/plugin/images/users/varun.jpg" alt="user-img"
+                                src="${ctxStatic}/bootstrap/3.0.3/images/users/varun.jpg" alt="user-img"
                                 class="img-circle"> <span class="hide-menu"> ${fns:getUser().name}<span
                                 class="fa arrow"></span></span>
                         </a>

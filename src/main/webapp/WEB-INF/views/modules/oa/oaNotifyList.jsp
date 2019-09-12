@@ -60,8 +60,8 @@
 										<div class="form-group">
 											<label class="control-label col-md-3">类型:</label>
 											<div class="col-md-9">
-												<form:select path="type" class="form-control">
-													<form:option value="" label=""/>
+												<form:select path="type" class="form-control selectpicker" data-style="form-control">
+													<form:option value="" label="全部"/>
 													<form:options items="${fns:getDictList('oa_notify_type')}" itemLabel="label" itemValue="value" htmlEscape="false"/>
 												</form:select>
 											</div>

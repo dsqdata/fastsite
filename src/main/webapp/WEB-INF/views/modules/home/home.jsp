@@ -128,7 +128,7 @@
         </div>
 
         <div class="row">
-            <div class="col-md-3 col-lg-3 col-xs-12 col-sm-3"> <img class="img-responsive" alt="user" src="${ctxStatic}/bootstrap/3.0.3/plugin/images/big/img1.jpg">
+            <div class="col-md-3 col-lg-3 col-xs-12 col-sm-3"> <img class="img-responsive" alt="user" src="${ctxStatic}/bootstrap/3.0.3/images/home/img1.jpg">
                 <div class="white-box">
                     <div class="text-muted"><span class="m-r-10"><i class="icon-calender"></i> May 16</span> <a class="text-muted m-l-10" href="#"><i class="fa fa-heart-o"></i> 38</a></div>
                     <h3 class="m-t-20 m-b-20">Top 20 Models are on the ramp</h3>
@@ -136,7 +136,7 @@
                     <button class="btn btn-success btn-rounded waves-effect waves-light m-t-20">Read more</button>
                 </div>
             </div>
-            <div class="col-md-3 col-lg-3 col-xs-12 col-sm-3"> <img class="img-responsive" alt="user" src="${ctxStatic}/bootstrap/3.0.3/plugin/images/big/img2.jpg">
+            <div class="col-md-3 col-lg-3 col-xs-12 col-sm-3"> <img class="img-responsive" alt="user" src="${ctxStatic}/bootstrap/3.0.3/images/home/img2.jpg">
                 <div class="white-box">
                     <div class="text-muted"><span class="m-r-10"><i class="icon-calender"></i> May 16</span> <a class="text-muted m-l-10" href="#"><i class="fa fa-heart-o"></i> 38</a></div>
                     <h3 class="m-t-20 m-b-20">Top 20 Models are on the ramp</h3>
@@ -144,7 +144,7 @@
                     <button class="btn btn-success btn-rounded waves-effect waves-light m-t-20">Read more</button>
                 </div>
             </div>
-            <div class="col-md-3 col-lg-3 col-xs-12 col-sm-3"> <img class="img-responsive" alt="user" src="${ctxStatic}/bootstrap/3.0.3/plugin/images/big/img3.jpg">
+            <div class="col-md-3 col-lg-3 col-xs-12 col-sm-3"> <img class="img-responsive" alt="user" src="${ctxStatic}/bootstrap/3.0.3/images/home/img3.jpg">
                 <div class="white-box">
                     <div class="text-muted"><span class="m-r-10"><i class="icon-calender"></i> May 16</span> <a class="text-muted m-l-10" href="#"><i class="fa fa-heart-o"></i> 38</a></div>
                     <h3 class="m-t-20 m-b-20">Top 20 Models are on the ramp</h3>
@@ -152,7 +152,7 @@
                     <button class="btn btn-success btn-rounded waves-effect waves-light m-t-20">Read more</button>
                 </div>
             </div>
-            <div class="col-md-3 col-lg-3 col-xs-12 col-sm-3"> <img class="img-responsive" alt="user" src="${ctxStatic}/bootstrap/3.0.3/plugin/images/big/img4.jpg">
+            <div class="col-md-3 col-lg-3 col-xs-12 col-sm-3"> <img class="img-responsive" alt="user" src="${ctxStatic}/bootstrap/3.0.3/images/home/img4.jpg">
                 <div class="white-box">
                     <div class="text-muted"><span class="m-r-10"><i class="icon-calender"></i> May 16</span> <a class="text-muted m-l-10" href="#"><i class="fa fa-heart-o"></i> 38</a></div>
                     <h3 class="m-t-20 m-b-20">Top 20 Models are on the ramp</h3>
@@ -168,25 +168,25 @@
                     <h3 class="box-title">Recent Comments</h3>
                     <div class="comment-center">
                         <div class="comment-body">
-                            <div class="user-img"> <img src="${ctxStatic}/bootstrap/3.0.3/plugin/images/users/pawandeep.jpg" alt="user" class="img-circle"></div>
+                            <div class="user-img"> <img src="${ctxStatic}/bootstrap/3.0.3/images/users/varun.jpg" alt="user" class="img-circle"></div>
                             <div class="mail-contnet">
                                 <h5>Pavan kumar</h5><span class="time">10:20 AM   20  may 2016</span> <span class="label label-rouded label-info">PENDING</span>
                                 <br/><span class="mail-desc">Donec ac condimentum massa. Etiam pellentesque pretium lacus. Phasellus ultricies dictum suscipit. Aenean commodo dui pellentesque molestie feugiat.</span> <a href="javacript:void(0)" class="btn btn btn-rounded btn-default btn-outline m-r-5"><i class="ti-check text-success m-r-5"></i>Approve</a><a href="javacript:void(0)" class="btn-rounded btn btn-default btn-outline"><i class="ti-close text-danger m-r-5"></i> Reject</a> </div>
                         </div>
                         <div class="comment-body">
-                            <div class="user-img"> <img src="${ctxStatic}/bootstrap/3.0.3/plugin/images/users/sonu.jpg" alt="user" class="img-circle"> </div>
+                            <div class="user-img"> <img src="${ctxStatic}/bootstrap/3.0.3/images/users/varun.jpg" alt="user" class="img-circle"> </div>
                             <div class="mail-contnet">
                                 <h5>Sonu Nigam</h5><span class="time">10:20 AM   20  may 2016</span> <span class="label label-rouded label-success">APPROVED</span>
                                 <br/><span class="mail-desc">Donec ac condimentum massa. Etiam pellentesque pretium lacus. Phasellus ultricies dictum suscipit. Aenean commodo dui pellentesque molestie feugiat.</span> </div>
                         </div>
                         <div class="comment-body">
-                            <div class="user-img"> <img src="${ctxStatic}/bootstrap/3.0.3/plugin/images/users/arijit.jpg" alt="user" class="img-circle"> </div>
+                            <div class="user-img"> <img src="${ctxStatic}/bootstrap/3.0.3/images/users/varun.jpg" alt="user" class="img-circle"> </div>
                             <div class="mail-contnet">
                                 <h5>Arijit singh</h5><span class="time">10:20 AM   20  may 2016</span> <span class="label label-rouded label-danger">REJECTED</span>
                                 <br/><span class="mail-desc">Donec ac condimentum massa. Etiam pellentesque pretium lacus. Phasellus ultricies dictum suscipit. Aenean commodo dui pellentesque molestie feugiat.</span> </div>
                         </div>
                         <div class="comment-body b-none">
-                            <div class="user-img"> <img src="${ctxStatic}/bootstrap/3.0.3/plugin/images/users/govinda.jpg" alt="user" class="img-circle"></div>
+                            <div class="user-img"> <img src="${ctxStatic}/bootstrap/3.0.3/images/users/varun.jpg" alt="user" class="img-circle"></div>
                             <div class="mail-contnet ">
                                 <h5>Govinda kumar</h5><span class="time">10:20 AM   20  may 2016</span> <span class="label label-rouded label-info">PENDING</span>
                                 <br/><span class="mail-desc">Donec ac condimentum massa. Etiam pellentesque pretium lacus. Phasellus ultricies dictum suscipit. Aenean commodo dui pellentesque molestie feugiat.</span> <a href="javacript:void(0)" class="btn btn btn-rounded btn-default btn-outline m-r-5"><i class="ti-check text-success m-r-5"></i>Approve</a><a href="javacript:void(0)" class="btn-rounded btn btn-default btn-outline"><i class="ti-close text-danger m-r-5"></i> Reject</a> </div>

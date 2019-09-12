@@ -155,7 +155,7 @@
 
 	<div class="lg-info-panel">
 		<div class="inner-panel">
-			<a href="javascript:void(0)" class="p-20 di"><img src="${ctxStatic}/bootstrap/3.0.3/plugin/images/admin-logo-dark.png" style="height: 45px;"> <img src="${ctxStatic}/bootstrap/3.0.3/plugin/images/admin-text-dark.png" style="height: 45px;"></a>
+			<a href="javascript:void(0)" class="p-20 di"><img src="${ctxStatic}/bootstrap/3.0.3/images/logo/admin-logo.png" style="height: 45px;"> <img src="${ctxStatic}/bootstrap/3.0.3/images/logo/admin-text.png" style="height: 45px;"></a>
 			<div class="lg-content">
 				<h2>快速开发框架 &amp; FastSite</h2>
 				<p class="text-muted">只为快速开发而生，主要使用技术 SpringMvc Mybatis Bootstrap3 Webuploader </p>
